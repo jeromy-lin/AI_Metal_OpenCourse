@@ -1,6 +1,7 @@
 # ===========================================================
 #  主題 : Metal_Inclusion_KMeans.py
-#  目標 : 結合CV & TSNE 進行資料集分類
+#  目標 : 結合LBP Local Binary Pattern & TSNE 進行資料集分類
+#         t-SNE t-distributed stochastic neighbor embedding
 #  注意 : 請預先下載 Merge50 資料集以利分群 
 #       : 為資料集的六種金屬種類 
 #  作者 : 國立雲林科技大學電機系 林家仁
