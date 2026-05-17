@@ -18,7 +18,7 @@ from skimage.feature import local_binary_pattern
 from google.colab import files
 
 # ==========================================
-# 1. 解壓大雜燴壓縮檔
+# 1. 將六種金屬失效 DataSet 進行解壓縮 總共60張
 # ==========================================
 print("=== 步驟 1: 解壓混合瑕疵資料集 ===")
 extract_dir = '/content/extracted_defects'
