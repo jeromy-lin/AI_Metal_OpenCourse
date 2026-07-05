@@ -27,13 +27,7 @@ with zipfile.ZipFile(target_zip, 'r') as zip_ref:
     zip_ref.extractall(BASE_PATH)
 print("解壓縮完成。")
 
-# 自動尋找包含多類別目標之核心資料夾路徑
-DATASET_PATH = BASE_PATH
-for root, dirs, files in os.walk(BASE_PATH):
-    valid_dirs = [d for d in dirs if not d.startswith('.')]
-    if len(valid_dirs) >= 3:
-        DATASET_PATH = root
-        break
+DATASET_PATH = os.path.join(BASE_PATH, 'NEU-CLS', 'train')
 
 print(f"資料載入路徑鎖定為: {DATASET_PATH}")
 
