@@ -27,14 +27,7 @@ with zipfile.ZipFile(target_zip, 'r') as zip_ref:
     zip_ref.extractall(BASE_PATH)
 print("解壓縮完成！")
 
-# 自動尋找「真正包含多個瑕疵分類」的內層根目錄
-DATASET_PATH = BASE_PATH
-for root, dirs, files in os.walk(BASE_PATH):
-    # 排除隱藏資料夾，當發現某個目錄下含有 3 個以上的子目錄（代表那是瑕疵類別層）
-    valid_dirs = [d for d in dirs if not d.startswith('.')]
-    if len(valid_dirs) >= 3:
-        DATASET_PATH = root
-        break
+DATASET_PATH = os.path.join(BASE_PATH, 'NEU-CLS', 'train')
 
 print(f" 系統自動鎖定的實際資料載入路徑為: {DATASET_PATH}")
 
